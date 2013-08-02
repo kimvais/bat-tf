@@ -1,0 +1,88 @@
+/set histsize=10000
+/set ptime=0
+;/addworld -T"telnet.*" -T'lpp' _ noitatohtori kirahvi72 bat-tiamat.dyndns.org 23
+;/addworld -T"telnet.*" -T'lpp' _ bat.taikatech.com 1234
+;/addworld -T"telnet.*" -T'lpp' _ noitatohtori kirahvi72 bat.cs.hut.fi 2023
+/addworld -T"telnet.*" -T'lpp' _ thiamin xsa199 hcbat.bat.org 23
+/def -i -h'DISCONNECT' hang_up = /repeat -30 1 /world
+/def -i -h'CONFAIL' con_fail = /repeat -5 1 /world
+/def -p1 -i -t'The game is wizard locked*' wizlocked = q%;/repeat -30 1 /world
+
+/set st_dummy=
+/set st_sof=
+/set st_phy=
+/set st_fir=
+/set st_col=
+/set st_aci=
+/set st_mag=
+/set st_psi=
+/set st_asp=
+/set st_ele=
+/set st_tox=
+/set st_pfe=
+/set st_pfg=
+/set st_flx=
+/set st_fs=
+/set st_iw=
+/set st_bt=
+/set st_us=
+/set st_up=
+/set st_ah=
+/set st_inv=
+/set st_hw=
+/set st_ww=
+/set st_dklt=
+/set st_camp=
+/set st_cere= 
+/set st_regen=
+/set st_ss=
+/set st_sps=
+/set cur_hp=000
+/set curtick=000
+/set rounds=*
+/set cur_exp=999999
+/set cur_ep=000
+/set csp=
+/set st_swap=
+/set st_logpath=
+/set carried_weight=
+/set status_int_clock=ftime("%H:%M", time())
+
+/set status_fields=@clock:5:Cwhite rounds:1:BCgreen st_camp:1:BCyellow st_cere:1:Cyellow cur_hp:4:BCred curtick:4:BCblue cur_ep:4:Cgreen cur_exp:6:Cblue carried_weight:2:Ccyan st_ss:2:BCwhite st_phy:3:Cred st_pfe:3:Cwhite st_sof:3:B st_flx:3:Cgreen st_sps:2:Cyellow st_fs:3:Cblue st_iw:3:Cblack st_bt:3:Cyellow st_us:3:Cyellow st_up:3:Cyellow st_ah:3:Cmagenta st_inv:3:B st_hw:2:B st_ww:2:Cblue st_dklt:2:B st_regen:3:Cgreen st_swap:3:B @mail:5:BCgreen st_logpath:3:BCred st_dummy
+
+/cd log
+/eval /set logfilename=$[ftime("hcbat-%d-%m-%Y_%H.log", time())]
+/def -i logmove=/eval /sh mv hcbat-log.log %logfilename
+/eval /log -g hcbat-log.log
+/eval /echo %logfilename
+
+/cd ~/trig
+/load -q general.tf
+/load -q party.tf
+/load -q prots.tf
+/load -q hc/hcbatlog.tf
+/load -q tick.tf
+/load -q hc/hclite.tf
+;/load -q caster.tf
+/load -q tank.tf
+/load -q tarm.tf
+/load -q druid.tf
+/load -q timerep.tf
+/load -q chest.tf
+/load -q swap.tf
+/load -q gag.tf
+/load -q ld.tf
+/load -q train.tf
+/load -q purse.tf
+/load -q alch.tf
+/load -q command.tf
+/load -q comple.tf
+/load -q numpad.tf
+/load -q path.tf
+;/load -q nun.tf
+
+;;PAKOLLISET!
+/def -t'You try to swim but you swallow some water.' hukku = /dc
+/def -i -p1 -mregexp -t'^ It contains ([0-9]+) anipium, ([0-9]+) batium, ([0-9]+) gold, ([0-9]+) mithril and ([0-9]+) platinum' purse_look = /eval /set purse_coins=$[%P1*50+%P2*100+%P3+%P4*500+%P5*10]%;/eval /echo Coins worth: $[purse_coins] gp
+/def -i -h'SEND {bf} *' command_bf = use bladed fury at %-1
+/def -i -h'SEND {con} *' command_con = use consider at %-1

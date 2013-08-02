@@ -1,0 +1,89 @@
+/set histsize=10000
+/set ptime=0
+/set LOGDIR=/home/kimvais/bat/log/
+/set TRIGDIR=/home/kimvais/bat/trig/
+/set isize=1
+/set warn_curly_re=off
+
+/set myname=kimvais
+/set capsname=Kimvais
+;/addworld -T"telnet.*" -T'lpp' _ thiamin kirahvi72 bat-tiamat.dyndns.org 23
+;/addworld -T"telnet.*" -T'lpp' _ bat.taikatech.com 1234
+;/addworld -T"telnet.*" -T'lpp' _ thiamin kirahvi72 bat.cs.hut.fi 2023
+/addworld -T"telnet.*" -T'lpp' _ kimvais %Fart00=) batmud.bat.org 23
+/def -i -h'DISCONNECT' hang_up = /retry _ 5
+/def -i -h'CONFAIL' con_fail = /retry _ 5
+;/def -p1 -i -t'The game is wizard locked*' wizlocked = q%;/repeat -30 1 /world
+/set max_trig=0
+/set wrapspace=1
+/set st_dummy=
+/set cur_sp=000
+/set rounds=*
+/set cur_exp=999999
+/set cur_ep=000
+/set csp=
+/set st_swap=
+/set st_logpath=
+/set carried_weight=
+/set status_int_clock=ftime("%H:%M", time())
+
+/set status_fields=
+;/set status_fields=@clock:5:Cwhite rounds:1:BCgreen st_camp:1:BCyellow st_cere:1:Cyellow cur_hp:4:BCred cur_sp:4:BCblue cur_ep:4:Cgreen cur_exp:6:Cblue carried_weight:2:Ccyan st_ss:2:BCwhite st_phy:3:Cred st_pfe:3:Cwhite st_sof:3:B st_flx:3:Cgreen st_sps:2:Cyellow st_fs:3:Cblue st_iw:3:Cblack st_bt:3:Cyellow st_us:3:Cyellow st_up:3:Cyellow st_ah:3:Cmagenta st_inv:3:B st_hw:2:B st_ww:2:Cblue st_dklt:2:B st_regen:3:Cgreen st_swap:3:B @mail:5:BCgreen st_logpath:3:BCred st_dummy
+
+/status_add -A -s0 @clock:5:Cwhite
+/status_add -A -s0 rounds:1:BCgreen
+/status_add -A -s0 st_camp:1:BCyellow
+/status_add -A -s0 st_cere:1:Cyellow
+/status_add -A -s0 cur_hp:4
+/status_add -A -s0 cur_sp:4
+/status_add -A -s0 cur_ep:4
+/status_add -A -s0 cur_exp:6:Cblue
+/status_add -A -s0 carried_weight:2:Ccyan
+/status_add -A -s0 st_prots:25:Cmagenta
+/status_add -A -s0 st_swap:3:B
+/status_add -A -s0 @mail:5:BCgreen
+/status_add -A -s0 st_logpath:3:BCred
+/status_add -A -s0 st_aura:3:Cyellow
+/status_add -A -s0 st_alert:6:BCred
+
+/eval /set logfilename=$[ftime("%d-%m-%Y_%H.log", time())]
+/def -i logmove=/eval /sh mv %{TRIGDIR}log.log %{TRIGDIR}%logfilename
+/eval /log -g %{LOGDIR}log.log
+/eval /echo %logfilename
+
+;/eval /load -q %{TRIGDIR}barb.tf
+;/eval /load -q %{TRIGDIR}channeller.tf
+;/eval /load -q %{TRIGDIR}conju.tf
+;/eval /load -q %{TRIGDIR}monk.tf
+;/eval /load -q %{TRIGDIR}alch.tf
+;/eval /load -q %{TRIGDIR}caster.tf
+;/eval /load -q %{TRIGDIR}clw.tf
+;/eval /load -q %{TRIGDIR}chest.tf
+/eval /load -q %{TRIGDIR}command.tf
+/eval /load -q %{TRIGDIR}comple.tf
+;/eval /load -q %{TRIGDIR}druid.tf
+/eval /load -q %{TRIGDIR}gag.tf
+;/eval /load -q %{TRIGDIR}general.tf
+;/eval /load -q %{TRIGDIR}hit.tf
+;/eval /load -q %{TRIGDIR}ld.tf
+/eval /load -q %{TRIGDIR}lite.tf
+/eval /load -q %{TRIGDIR}log.tf
+;/eval /load -q %{TRIGDIR}nav.tf
+;/eval /load -q %{TRIGDIR}numpad.tf
+;/load -q %{TRIGDIR}nun.tf
+;/eval /load -q %{TRIGDIR}party.tf
+/eval /load -q %{TRIGDIR}path.tf
+;/eval /load -q %{TRIGDIR}prots.tf
+;/eval /load -q %{TRIGDIR}purse.tf
+;/eval /load -q %{TRIGDIR}skill.tf
+;/eval /load -q %{TRIGDIR}swap.tf
+;/eval /load -q %{TRIGDIR}tank.tf
+;/eval /load -q %{TRIGDIR}tarm.tf
+;/eval /load -q %{TRIGDIR}tick.tf
+;/eval /load -q %{TRIGDIR}tiger.tf
+/eval /load -q %{TRIGDIR}timerep.tf
+;/eval /load -q %{TRIGDIR}train.tf
+;/eval /load -q %{TRIGDIR}analysis.tf
+;/eval /load -q %{TRIGDIR}stun.tf
+
+/eval /cd %{TRIGDIR}

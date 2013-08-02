@@ -1,0 +1,6 @@
+/def -t"and finish the move with a powerful elbow strike to his back!" ip_kick = /set ip_hit1=$[ip_hit1+1]
+/def -t"Your hands start to glow with power. With unearthly speed you thrust both" ip_hands = /set ip_hit5=$[ip_hit5+1]
+/def -t"You deliver a strong finger-strike to *\'s throat crushing" ip_fstrike = /set ip_hit3=$[ip_hit3+1]
+/def -t"You execute a well timed combination of kicks and punches. Where ever" ip_combination = /set ip_hit4=$[ip_hit4+1]
+/def -t"You move with blinding speed and deliver a spinning roundhouse kick to" ip_roundhouse = /set ip_hit2=$[ip_hit2+1]
+/def -t"You do a complex attack maneuver but miss." ip_miss = /set ip_fails=$[ipfails+1]

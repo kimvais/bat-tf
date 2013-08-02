@@ -1,0 +1,51 @@
+/def -F -P0Cgreen -i -t' apple ' omena
+/def -F -P0Cgreen -i -t' arnica ' aarnikka
+/def -F -P0Cgreen -i -t' barberry ' baarimarja
+/def -F -P0Cgreen -i -t' blood moss ' verisammal
+/def -F -P0Cgreen -i -t' blueberry ' mustikka
+/def -F -P0Cgreen -i -t' boneset ' luu_asennus
+/def -F -P0Cgreen -i -t' borage ' jokusuokasvi
+/def -F -P0Cgreen -i -t' burdock ' takiainen
+/def -F -P0Cgreen -i -t' cabbage ' tavallinenkaali
+/def -F -P0Cgreen -i -t' carrot ' porkkana
+/def -F -P0Cgreen -i -t' cauliflower ' kukkakaali
+/def -F -P0Cgreen -i -t' chickweed ' chicksiruoho
+/def -F -P0Cgreen -i -t' chicory ' jokupeltopuska
+/def -F -P0Cgreen -i -t' comfrey ' kamferi
+/def -F -P0Cgreen -i -t' cotton ' puuvilla
+/def -F -P0Cgreen -i -t' costmary ' hintamarja
+/def -F -P0Cgreen -i -t' crystalline ' kristalliini
+/def -F -P0Cgreen -i -t' elder ' vanhempi
+/def -F -P0Cgreen -i -t' foxglove ' sormustinkukka
+/def -F -P0Cgreen -i -t' garlic ' valkosipuli
+/def -F -P0Cgreen -i -t' ginseng ' kiinalainenrohtoyrtti
+/def -F -P0Cgreen -i -t' holly ' piikkipaatsama
+/def -F -P0Cgreen -i -t' henbane ' kananhaitta 
+/def -F -P0Cgreen -i -t' honeysuckle ' hunajaimu
+/def -F -P0Cgreen -i -t' lettuce ' lehtikaali
+/def -F -P0Cgreen -i -t' lobelia ' loopelia
+/def -F -P0Cgreen -i -t' lungwort ' keuhkoraha
+/def -F -P0Cgreen -i -t' jimsonweed ' gizmoruoho
+/def -F -P0Cgreen -i -t' mandrake ' taikajim
+/def -F -P0Cgreen -i -t' mangrel ' miesgrel
+/def -F -P0Cgreen -i -t' mistletoe ' misteli
+/def -F -P0Cgreen -i -t' mugwort ' mukihinta
+/def -F -P0Cgreen -i -t' mushroom ' sienisieni
+/def -F -P0Cgreen -i -t' nightshade ' koiso
+/def -F -P0Cgreen -i -t' onion ' sipuli
+/def -F -P0Cgreen -i -t' plum ' luumu
+/def -F -P0Cgreen -i -t' potato ' peruna
+/def -F -P0Cgreen -i -t' raspberry ' vattu
+/def -F -P0Cgreen -i -t' rhubarb ' raparperi
+/def -F -p100 -P0Cgreen -i -t' strawberry ' mansikka
+/def -F -P0Cgreen -i -t' soapwort ' saunakukka_heh
+/def -F -P0Cgreen -i -t' spinach ' pinaatti
+/def -F -P0Cgreen -i -t' thistle ' ohdake
+/def -F -P0Cgreen -i -t' tomato ' tomaatti
+/def -F -P0Cgreen -i -t' pear ' paaryna
+/def -F -P0Cgreen -i -t' turnip ' turnipsi
+/def -F -p101 -P0Cgreen -i -t' vine ' kotiviini
+/def -F -P0Cgreen -i -t' water lily ' jyrkilumme
+/def -F -P0Cgreen -i -t' wolfbane ' susihaitta
+/def -F -P0Cgreen -i -t' wormwood ' matopuu
+/def -F -P0Cgreen -i -t' yarrow ' siankarsamo
